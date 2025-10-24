@@ -28,7 +28,7 @@ header{
 }
 
 .bg-image{
-    background-image: url('/img/fundo-3dw.webp');
+    background-image: url("../img/3dfundo.webp");
     background-size: cover;
 }
 
@@ -226,7 +226,7 @@ h2{
 
 footer{
     display: flex;
-    padding: 4rem;
+    padding: 80px;
     flex-direction: column;
     gap: 2rem;
     text-align: center;

@@ -7,31 +7,38 @@
 
 
 :root{
-    --cor-primaria: #000155;
-    --cor-dois: #1A0054;
-    --cor-tres: #003754;
-    --links: #0fbbff;
+    --realce: #0fbbff;
     --background-color: #001B54;
-    --text: #1d1d1d;
-    --white: #FFFFFF;
+    --text90: #FFFFFFE5;
+    --text80: #FFFFFFCC; 
+    --text70: #FFFFFFB2; 
 }
 
+
+
 body{
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: var(--background-color);
-    color: var(--white);
+    color:#FFF;
     height: 100vh;
 }
 
-img{
+header{
+    background: linear-gradient(90deg, rgba(0, 8, 96, 0.90) 0%, rgba(0, 59, 185, 0.90) 100%); 
+}
+
+.bg-image{
+    background-image: url('/img/fundo-3dw.webp');
+    background-size: cover;
+}
+
+img{             
     max-width: 100%;
     height: auto;
 }
 .navbar{
-    background-color: var(--cor-primaria);
-    border-radius: 0px 0px 15px 15px;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    background-color: #ffffff00;
+    padding-top: 34px;
 }
 
 .navbar-brand{
@@ -39,9 +46,14 @@ img{
 }
 
 .navbar .nav-link{
-    color: var(--white);
-    font-weight: 600;
+    color: var(--text80);
+    font-weight: 400;
     font-size: 1.1rem;
+    
+}
+
+.navbar-nav{
+    gap: 3.125rem;
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -51,57 +63,55 @@ img{
     border-color: rgba(255, 255, 255, 0.1);
 }
 .nav-link:hover{
-    color: var(--links);
-    text-decoration: underline;
+    color: var(--realce);
     transition: .3s;
-}
-h1{
-    font-size: 3rem;
-    font-weight: 600;
-    letter-spacing: 8px;
 }
 
 strong{
-    color: var(--links);
-}
-h2{
-    font-size: 1.7rem;
-    font-weight: 700;
-}
-h3{
-    font-size: 1.3rem ;
-    color: white;
+    color: var(--realce);
 }
 
-a{
-    color: var(--links);
-}
 
 main {
     display:flex;
     flex-direction: column;
     gap: 1rem;
+    background: linear-gradient(180deg, rgba(0, 1, 85, 0.36) 0%, rgba(15, 19, 255, 0.64) 50%, rgba(0, 27, 84, 0.46) 100%);
 }
 
-section{
-    padding: 4rem; 
-}
 
 .primeira-section{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
-    min-height: 650px;
+    min-height: 655px;
+    
 }
 
 .primeira-section > div{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
     min-width: 300px;
+    align-items: center;
 }
+
+.box-texto-principal > h1{
+    font-size: 3.625rem;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.54) 2.7%, rgba(255, 255, 255, 0.90) 50.2%, rgba(255, 255, 255, 0.63) 97.69%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.box-texto-principal > p{
+    color: var(--text80);
+}
+
 
 .img-perfil{
     padding: 1rem;
@@ -110,54 +120,81 @@ section{
 }
 
 .botao-contrate-me{
-     padding: .6rem;
-     font-size: 1rem;
-     border-radius: 30px;
-     cursor: pointer;
-     transition: .3s;
-     background-color: var(--cor-primaria);
-     color: var(--white);
-     width: 170px;
-     text-align: center;
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    color: var(--text80);
+    background: linear-gradient(29deg, rgba(83, 112, 255, 0.72) 19.06%, rgba(38, 74, 250, 0.80) 84.05%);
+    box-shadow: 0 -4px 4px 0 rgba(255, 255, 255, 0.11) inset, 0 4px 4px 0 rgba(255, 255, 255, 0.11) inset;
+    width: 137px;
+    text-decoration: none;
 }
 
 .botao-contrate-me:hover{
-    background-color: #1A0054;
+    transform: scale(1.1);
+    transition: .5s;
 }
 
 .experiencias-section{
-    background-color: var(--cor-primaria);
-    gap: 2rem;
+    padding-top: 5.3rem;
+    gap: 3.75rem; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
+    flex-direction: column;
 }
 
 .box-experiencias{
     display: flex;
-    gap: 2rem;
+    gap: 4.6rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.experiencia1, .experiencia2{
+h2{
+    font-size: 3rem;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.54) 2.7%, rgba(255, 255, 255, 0.90) 50.2%, rgba(255, 255, 255, 0.63) 97.69%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.experiencias{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    width: 30%;
-    padding: 1.2rem;
-    background-color: var(--background-color);
+    width: 530px;
+    height: 480px;
     border-radius: 15px;
-    border-style: double;
-    gap: 1rem;
-    box-shadow: rgba(105, 103, 255, 0.35) 0px 5px 15px;
+    background: linear-gradient(120deg, rgba(134, 135, 201, 0.48) 0.99%, rgba(107, 137, 201, 0.56) 98.59%);
+    padding: 32px 24px;
+    gap: 1.1rem;
+}
+.experiencias > h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--text90);
+}
+.experiencias > h4 {
+    font-size: 1.1rem;
+    color: var(--text70);
+    font-weight: 500;
 }
 
-.experiencia1:hover, .experiencia2:hover{
+.experiencias > p{
+    font-size: 1rem;
+    color: var(--text70);
+}
+
+.experiencias:hover{
     background-color: var(--cor-tres);
     transition: .3s;
     box-shadow: rgba(159, 107, 255, 0.35) 0px 5px 15px;
@@ -165,22 +202,26 @@ section{
 
 .sobre-section{
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 7.5rem;
 }
 
 .box-sobre-mim{
     display: flex;
-    gap: 2rem;
+    gap: 8rem;
     justify-content: center;
     align-items: center;
     
 }
 
 .texto-sobre-mim{
-    max-width: 600px;
+    max-width: 760px;
+    color: var(--text70);
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 footer{
@@ -189,6 +230,7 @@ footer{
     flex-direction: column;
     gap: 2rem;
     text-align: center;
+    background-color: #001B54;
 }
 
 .box-redes-sociais{
@@ -204,22 +246,24 @@ footer{
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor-primaria);
     flex-wrap: wrap;
+    padding-top: 80px ;
 }
 
 .cards{
     display: flex;
-    gap: 4rem;
+    gap: 7.5rem;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 40px;
 }
 
 .card{
-    background-color: var(--cor-tres);
+    width: 232px;
+    height: 386px;
     border-radius: 15px;
-    text-align: center;
-    
+    text-align: center; 
+    background: linear-gradient(120deg, rgba(134, 135, 201, 0.48) 0.99%, rgba(107, 137, 201, 0.56) 98.59%);   
 }
 
 .img-card{
@@ -227,8 +271,19 @@ footer{
     
 }
 
+.descricao-card > h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text80);
+}
+
+.descricao-card > a {
+    font-size: 0.8rem; 
+    color: var(--text70);
+}
+
 .descricao-card{
-    padding: 1rem;
+    padding: 1.1rem;
 }
 
 @media(max-width: 768px) {
@@ -237,15 +292,18 @@ footer{
     }
     .navbar, .navbar-nav{
         text-align: center;
+        gap: 5px;
     }
-    .navbar-brand{
-        width: 80px;
+    .botao-contrate-me{
+        margin: auto;
+
     }
+
     .primeira-section {
         flex-direction: column;
         text-align: center;
-        min-height: auto;
-        padding-top: 8rem;
+        min-height: 550px;
+        padding-bottom: 40px;
     }
 
     .box-texto-principal{
@@ -254,16 +312,29 @@ footer{
     }
     h1{
         font-size: 2.2rem;
-        letter-spacing: 3px;
     }
 
-    .experiencia1, .experiencia2{
+    .experiencias{
+        height: 550px;
         width: 100%;
+        padding: 20px;
+    }
+
+    .sobre-section{
+        padding-top: 20px;
     }
 
     .box-sobre-mim{
         flex-direction: column;
         text-align: center;
+        gap: 20px;
+    }
+    .projetos-section{
+        padding-top: 20px;
+    }
+    .cards{
+        gap: 3rem;
+        padding-top: 20px;
     }
 
 }

@@ -28,7 +28,7 @@ header{
 }
 
 .bg-image{
-    background-image: url("../img/3dfundo.webp");
+    background-image: url(../img/3dfundo.webp);
     background-size: cover;
 }
 

@@ -315,9 +315,14 @@ footer{
     }
 
     .experiencias{
-        height: 550px;
+        flex-wrap: wrap;
+        height:450px;
         width: 100%;
-        padding: 20px;
+        padding: 10px;
+    }
+
+    .experiencias > p{
+        font-size: 0.8rem;
     }
 
     .sobre-section{
